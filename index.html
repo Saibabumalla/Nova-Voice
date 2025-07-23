@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="nova-wrapper">
+    <div class="nova-title">NOVA</div>
+    <div class="nova-subtitle">Your Smart Voice Assistant</div>
+
+    <div class="time-box">
+      <div><i class="fas fa-clock"></i> <span id="currentTime"></span></div>
+      <div><i class="fas fa-calendar-alt"></i> <span id="currentDate"></span></div>
+    </div>
+
+    <div class="mic-visual" id="voiceCircle">
+      <i class="fas fa-microphone fa-2x"></i>
+    </div>
+
+    <div class="mic-btns">
+      <button id="speakBtn" class="btn"><i class="fas fa-microphone"></i> Start Listening</button>
+      <button id="stopSpeakingBtn" class="btn"><i class="fas fa-volume-mute"></i> Stop Speaking</button>
+    </div>
+
+    <div class="transcript-box">
+      <strong>Status:</strong> <span id="statusBadge">Idle</span>
+      <p id="transcript">Say something...</p>
+    </div>
+
+    <div class="answer-box" id="answerBox">
+      <p id="answerText"></p>
+      <a id="articleLink" href="#" target="_blank" style="color:#00fff7; display:none;">🔗 Read More</a>
+    </div>
+
+    <div class="quick-commands">
+      <h3>Try saying:</h3>
+      <div class="command-grid">
+        <div class="command" data-command="what time is it">"What time is it?"</div>
+        <div class="command" data-command="tell me a joke">"Tell me a joke"</div>
+        <div class="command" data-command="open google">"Open Google"</div>
+        <div class="command" data-command="search for cats">"Search for cats"</div>
+        <div class="command" data-command="what's the weather">"What's the weather?"</div>
+        <div class="command" data-command="who is albert einstein">"Who is Albert Einstein?"</div>
+        <div class="command" data-command="what is artificial intelligence">"What is Artificial Intelligence?"</div>
+        <div class="command" data-command="what is the speed of light">"What is the speed of light?"</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>- - Built by SAI BABU MALLA - -</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

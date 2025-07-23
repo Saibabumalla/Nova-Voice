@@ -45,7 +45,6 @@ This project showcases how powerful browser-native APIs can be used to build a f
 - “Who is Albert Einstein?”  
 - “What is Artificial Intelligence?”  
 
-> Wikipedia queries will fetch a summary and show a “🔗 Read More” link.
 
 ---
 

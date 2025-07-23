@@ -71,3 +71,11 @@ This project showcases how powerful browser-native APIs can be used to build a f
 - 📡 Serper.dev API for fallback Google snippets
 
 ---
+## 📂 Project Structure
+
+/nova-voice-assistant
+├── index.html # Main HTML file (UI structure)
+├── style.css # Stylesheet (design and layout)
+├── script.js # JavaScript logic (voice commands)
+└── README.md # Project documentation (this file)
+

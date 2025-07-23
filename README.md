@@ -75,7 +75,10 @@ This project showcases how powerful browser-native APIs can be used to build a f
 
 /nova-voice-assistant
 ├── index.html # Main HTML file (UI structure)
+
 ├── style.css # Stylesheet (design and layout)
+
 ├── script.js # JavaScript logic (voice commands)
+
 └── README.md # Project documentation (this file)
 

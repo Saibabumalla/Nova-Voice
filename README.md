@@ -48,6 +48,19 @@ This project showcases how powerful browser-native APIs can be used to build a f
 
 ---
 
+## 🧩 How It Works
+
+1. **Speech Recognition**: Captures your voice through the Web Speech API and transcribes it to text.
+2. **Command Detection**: The script analyzes the spoken text and checks it against predefined commands.
+3. **Action Handling**:
+   - Speaks a response using the `SpeechSynthesisUtterance` API.
+   - Opens web pages for certain commands (e.g., Google, YouTube).
+   - Fetches Wikipedia summaries using the MediaWiki API.
+   - Retrieves fallback Google snippets using Serper.dev if needed.
+4. **User Feedback**: Displays the spoken text and answer on screen with proper status updates.
+
+---
+
 ## 🛠️ Technologies Used
 
 - 💻 HTML5  

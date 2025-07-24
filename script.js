@@ -11,19 +11,16 @@ const recognition = new SpeechRecognition();
 recognition.lang = "en-US";
 recognition.interimResults = false;
 
-// Start listening
 speakBtn.addEventListener("click", () => {
   recognition.start();
   statusBadge.innerText = "Listening...";
 });
 
-// Stop speaking
 stopSpeakingBtn.addEventListener("click", () => {
   window.speechSynthesis.cancel();
   statusBadge.innerText = "Stopped Speaking";
 });
 
-// On voice result
 recognition.onresult = (event) => {
   const transcript = event.results[0][0].transcript.toLowerCase();
   transcriptElement.innerHTML = `<strong>You said:</strong> ${transcript}`;
@@ -31,7 +28,6 @@ recognition.onresult = (event) => {
   statusBadge.innerText = "Processing...";
 };
 
-// When recognition ends
 recognition.onend = () => {
   statusBadge.innerText = "Idle";
 };
@@ -54,6 +50,96 @@ function respondToCommand(command) {
     response = "Opening Google...";
     speak(response);
     window.open("https://www.google.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open whatsapp")) {
+    response = "Opening WhatsApp...";
+    speak(response);
+    window.open("https://www.whatsapp.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open facebook")) {
+    response = "Opening Facebook...";
+    speak(response);
+    window.open("https://www.facebook.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open instagram")) {
+    response = "Opening Instagram...";
+    speak(response);
+    window.open("https://www.instagram.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open linkedin")) {
+    response = "Opening LinkedIn...";
+    speak(response);
+    window.open("https://www.linkedin.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open telegram")) {
+    response = "Opening Telegram...";
+    speak(response);
+    window.open("https://telegram.org", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open twitter") || command.includes("open x")) {
+    response = "Opening Twitter...";
+    speak(response);
+    window.open("https://twitter.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open youtube")) {
+    response = "Opening YouTube...";
+    speak(response);
+    window.open("https://www.youtube.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open snapchat")) {
+    response = "Opening Snapchat...";
+    speak(response);
+    window.open("https://www.snapchat.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open reddit")) {
+    response = "Opening Reddit...";
+    speak(response);
+    window.open("https://www.reddit.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open tiktok")) {
+    response = "Opening TikTok...";
+    speak(response);
+    window.open("https://www.tiktok.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open pinterest")) {
+    response = "Opening Pinterest...";
+    speak(response);
+    window.open("https://www.pinterest.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open discord")) {
+    response = "Opening Discord...";
+    speak(response);
+    window.open("https://discord.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open messenger")) {
+    response = "Opening Messenger...";
+    speak(response);
+    window.open("https://www.messenger.com", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open zoom")) {
+    response = "Opening Zoom...";
+    speak(response);
+    window.open("https://zoom.us", "_blank");
+    resetUIAfterDelay();
+    return;
+  } else if (command.includes("open gmail")) {
+    response = "Opening Gmail...";
+    speak(response);
+    window.open("https://mail.google.com", "_blank");
     resetUIAfterDelay();
     return;
   } else if (command.includes("search for")) {
@@ -83,7 +169,6 @@ function respondToCommand(command) {
   }
 }
 
-// Speak text aloud
 function speak(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance(text);
@@ -92,7 +177,6 @@ function speak(text) {
   synth.speak(utterance);
 }
 
-// Reset UI after external actions like opening Google
 function resetUIAfterDelay() {
   setTimeout(() => {
     answerBox.style.display = "none";
@@ -103,7 +187,6 @@ function resetUIAfterDelay() {
   }, 3000);
 }
 
-// Fetch a short summary from Wikipedia
 async function fetchWikipediaSummary(query) {
   const apiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`;
 
@@ -132,9 +215,8 @@ async function fetchWikipediaSummary(query) {
   }
 }
 
-// ✅ Fetch Google Snippet via Serper.dev API
 async function fetchGoogleSnippet(query) {
-  const apiKey = "2960767a7ee1bb51e77b5d9291ceb13e10822d43"; // 🔐 Replace with your Serper.dev API key
+  const apiKey = "2960767a7ee1bb51e77b5d9291ceb13e10822d43";
 
   try {
     const response = await fetch("https://google.serper.dev/search", {
@@ -165,7 +247,6 @@ async function fetchGoogleSnippet(query) {
   }
 }
 
-// Final fallback if both Wikipedia and Serper fail
 function fallbackToGoogleLink(query) {
   const msg = "I couldn't find an exact answer, but here's what I found on Google.";
   const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
@@ -177,7 +258,6 @@ function fallbackToGoogleLink(query) {
   answerBox.style.display = "block";
 }
 
-// Update date and time
 function updateTime() {
   const now = new Date();
   document.getElementById("currentTime").innerText = now.toLocaleTimeString();
@@ -186,7 +266,6 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// Enable quick command clicks
 document.querySelectorAll(".command").forEach(cmd => {
   cmd.addEventListener("click", () => {
     respondToCommand(cmd.getAttribute("data-command"));

@@ -73,12 +73,8 @@ This project showcases how powerful browser-native APIs can be used to build a f
 
 ## 📂 Project Structure
 
-```
-plaintext /nova-voice-assistant ├── index.html # Main interface and layout ├── style.css # Styles (colors, layout, responsiveness) ├── script.js # Voice recognition and logic └── README.md # Project description and documentation
-```
-/nova-voice-assistant
-├── index.html # Main interface and layout
-├── style.css # Styles (colors, layout, responsiveness)
-├── script.js # Voice recognition and logic
-└── README.md # Project description and documentation
-'''
+<pre> <code>```plaintext /nova-voice-assistant 
+   ├── index.html # Main interface and layout 
+   ├── style.css # Styles (colors, layout, responsiveness) 
+   ├── script.js # Voice recognition and logic 
+   └── README.md # Project description and documentation ```</code> </pre>

@@ -76,8 +76,8 @@ This project showcases how powerful browser-native APIs can be used to build a f
 ```
 nova-voice-assistant 
    ├── README.md # Project description and documentation 
-   ├── style.css # Styles (colors, layout, responsiveness) 
-   ├── script.js # Voice recognition and logic 
    ├── index.html # Main interface and layout
-   └── 
+   ├── script.js # Voice recognition and logic 
+   ├── style.css # Styles (colors, layout, responsiveness) 
+   └── novavoice QR.png # QR Code
 ```

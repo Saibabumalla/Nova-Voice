@@ -8,10 +8,6 @@
 
 👉 https://novavoice.netlify.app/
 
-📱 **Scan QR Code to Open on Mobile:**
-
-![NOVA QR Code](./Screenshot%202025-07-24%20151508.png)
-
 ---
 
 ## 📌 Project Overview
@@ -77,12 +73,10 @@ This project showcases how powerful browser-native APIs can be used to build a f
 
 ## 📂 Project Structure
 
-' ' '
-
+'''
 /nova-voice-assistant
 ├── index.html # Main interface and layout
 ├── style.css # Styles (colors, layout, responsiveness)
 ├── script.js # Voice recognition and logic
 └── README.md # Project description and documentation
-
-' ' '
+'''

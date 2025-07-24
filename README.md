@@ -78,5 +78,6 @@ nova-voice-assistant
    ├── README.md # Project description and documentation 
    ├── style.css # Styles (colors, layout, responsiveness) 
    ├── script.js # Voice recognition and logic 
-   └── index.html # Main interface and layout
+   ├── index.html # Main interface and layout
+   └── 
 ```

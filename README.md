@@ -79,5 +79,5 @@ nova-voice-assistant
    ├── index.html # Main interface and layout
    ├── script.js # Voice recognition and logic 
    ├── style.css # Styles (colors, layout, responsiveness) 
-   └── novavoice QR.png # QR Code
+   └── novavoiceQR.png # QR Code
 ```
